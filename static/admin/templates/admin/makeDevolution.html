@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<h3>Entre com a km rodada</h3>
+<form action="" method="POST">{% csrf_token %}
+  <ul>
+  {{ form.as_ul }}  
+  </ul>
+  <input type="hidden" name="action" value="makeDevolution"/>
+  <input type="submit" name="makeDevolution" value="Confirmar"/>
+</form>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "index.html" %}
+{% block content %} 
+<div class="container">  
+  <h2>Sistema de locação de veículos</h2> 
+  <hr />
+  <h3>Selecione o período</h3>
+  <form action="" id="rent_form" method="POST">
+    <input type="hidden" value="{{ client }}" name="client" id="client"/>
+    <input type="hidden" value="{{ token }}" name="token" id="token"/>
+    <div class="row">      
+      <div class='col-sm-6'>
+        <div class="form-group">
+          <div class='input-group date' id='datetimepicker_initialDate'>	   
+	    {{rent_form.initialDate}}
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+      </div>      
+      
+      <div class='col-sm-6'>
+        <div class="form-group">
+          <div class='input-group date' id='datetimepicker_endDate'> 
+	    {{rent_form.endDate}}
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+      </div>      
+    </div>
+
+    <div class='col-sm-12'>
+      <h3>Selecione o veículo</h3>
+      <p align="center">
+	<div id="vehicles"></div>
+      </p>
+    </div>   
+
+    <div class='col-sm-12'>
+      <p align="center">
+	<button type="submit" class="btn btn-primary">Confirmar Locação</button>
+      </p>
+    </div>   
+  </form>
+
+  <h2>Minhas locações</h2> 
+  <hr />
+  <div class='col-sm-12'>
+    <table id="my_rents" class="display" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Veículo</th>
+          <th>Data Retirada</th>
+          <th>Data Devolução</th>
+          <th>Km Rodada</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+	<th>Veículo</th>
+        <th>Data Retirada</th>
+        <th>Data Devolução</th>
+        <th>Km Rodada</th>
+      </tfoot>
+    </table>   
+  </div>
+
+
+  <div class='col-sm-12'>
+      <p align="center">
+	<button type="button" id="logout" class="btn btn-primary">Logout</button>
+      </p>
+    </div>   
+</div> 
+{% endblock %}

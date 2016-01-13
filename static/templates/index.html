@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<html>
+<head>
+<title>Car Rental</title>
+<link rel="stylesheet" href="{% static 'media/js/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'media/js/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css' %}">
+<link rel="stylesheet" href="">
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+
+<script src="{% static 'media/js/bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'media/js/bower_components/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'media/js/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'media/js/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'media/js/bower_components/js-cookie/src/js.cookie.js' %}"></script>
+<script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+{% block extra_media %}
+<script src="{% static 'media/js/all.js' %}"></script>
+{% endblock %}
+</head>
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>

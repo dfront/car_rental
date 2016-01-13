@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block extra_media %}<script src="/static/media/js/login.js"></script>{% endblock %}
+{% block content %}
+<div class="container">  
+  <h2>Entre com seus dadas de acesso</h2>
+    <form method="POST" id="form_login">
+      {{login_form}}
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+    <div class='col-sm-12'>
+      <p>user: hercules, pass: hercules123</p>
+      <p><a href="/admin/">Admin</a> </p>
+    </div>
+</div>
+{% endblock %}
